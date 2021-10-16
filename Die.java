@@ -6,25 +6,27 @@ public class Die {
     public Die() {
         name = "d6";
         sides = 6;
-        roll();
 
     }
 
     public Die(int sides) {
         this.sides = sides;
         name = "d" + sides;
-        roll();
     }
 
-    public Die(int sides, int sideUp) {
+
+    public Die(int sides, String percentileCheck) {
         this.sides = sides;
         name = "d" + sides;
-        this.sideUp = sideUp;
     }
 
     //A roll method to generate a random value
     public void roll() {
         sideUp = (int) (1 + Math.random() * sides);
+    }
+
+    public void percentileRoll(){
+        sideUp = ((int) (1 + Math.random() * sides)) * 10;
     }
 
     public String getName() {

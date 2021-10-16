@@ -13,8 +13,8 @@ public class Dicegame {
         Die d6 = new Die();
         System.out.println("Creating a default d20...");
         Die d20 = new Die(20);
-        System.out.println("reating percentile die (a special d10)...");
-        Die d10 = new Die(10);
+        System.out.println("Creating percentile die (a special d10)...");
+        Die d10 = new Die(10, "percentile");
         System.out.println("The current side up for " + d6.getName() + " is " + d6.getSideUp());
         System.out.println("The current side up for " + d20.getName() + " is " + d20.getSideUp());
         System.out.println("The current side up for Percentile  is " + d10.getSideUp());
@@ -28,7 +28,7 @@ public class Dicegame {
         System.out.println("The new value is " + d20.getSideUp());
 
         System.out.println("Rolling the Percentile...");
-        d10.roll();
+        d10.percentileRoll();
         System.out.println("The new value is " + d10.getSideUp());
 
         System.out.println("\nSetting the d20 to show 20...");
